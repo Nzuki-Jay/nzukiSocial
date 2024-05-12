@@ -1,0 +1,62 @@
+@import '../../styles.scss';
+
+.leftSideBar {
+    flex: 1.2;
+    height: calc(100vh - 50px);
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    overflow-y: scroll;
+    z-index: 3;
+    @include flex-grid($align: flex-start, $direction: column);
+    padding: 30px;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+
+    hr {
+        height: 1px;
+        width: 100%;
+        background-color: var(--border);
+        margin: 1.5rem 0;
+        border: 1px solid transparent;
+    }
+    
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .profileimg {
+        height: 32px;
+        width: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .top,
+    .center,
+    .bottom {
+        @include flex-grid($direction: column);
+        gap: 1.2rem;
+
+        div {
+            @include flex-grid($align: center);
+            gap: 10px;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        span {
+            font-size: 18px;
+            color: var(--textColor);
+        }
+    }
+}

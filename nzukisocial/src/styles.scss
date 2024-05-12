@@ -1,0 +1,36 @@
+:root {
+  --textColor: #000;
+  --bg: white;
+  --logo: darkblue;
+  --bgSoft: #f6f3f3;
+  --textColorSoft: #555;
+  --border: lightgray;
+  --scrollBar: #222;
+  --shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  --storyColor: white;
+}
+
+
+
+// Dark theme
+.dark {
+  --textColor: whitesmoke;
+  --bg: #222;
+  --logo: white;
+  --bgSoft: #333;
+  --textColorSoft: lightgray;
+  --border: #444;
+  --scrollBar: white;
+  --shadow: 0 0 3px rgba(250, 245, 245, 0.2);
+  --storyColor: white;
+}
+
+
+
+@mixin flex-grid($direction: none, $align: none, $justify: none) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+

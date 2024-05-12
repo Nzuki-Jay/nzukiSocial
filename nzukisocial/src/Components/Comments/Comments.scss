@@ -1,0 +1,82 @@
+@import '../../styles.scss';
+
+.comments {
+    @include flex-grid($direction: column);
+    gap: 15px;
+    width: 100%;
+    color: var(--textColor);
+    font-size: 18px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .top {
+        @include flex-grid($align: center);
+        width: 100%;
+        
+        form {
+            width: 100%;
+            @include flex-grid($align: center);
+            gap: 10px;
+            margin-left: 15px;
+
+            input {
+                width: 100%;
+                background-color: var(--bg);
+                border-radius: 5px;
+                box-shadow: var(--shadow);
+                border: none;
+                outline: none;
+                color: var(--textSoftColor);
+                font-weight: bold;
+                padding: 8px 16px;
+            }
+
+            button {
+                background-color: rgb(71, 71, 245);
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: var(--storyColor);
+                padding: 8px 16px;
+                transition: 0.3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(24, 24, 248);
+                }
+            }
+        }
+    }
+
+    .bottom {
+        @include flex-grid($direction: column, $align: flex-start);
+        gap: 15px;
+        width: 100%;
+
+        .comment {
+            @include flex-grid($justify: space-between, $align: center);
+
+            span {
+                font-size: 16px;
+                color: var(--textSoftColor);
+            }
+
+            .left {
+                @include flex-grid( $align: flex-start);
+                gap: 10px;
+
+                div {
+                    @include flex-grid($direction: column, $align: flex-start);
+                    gap: 5px;
+
+                    
+                }
+            }
+        }
+    }
+}

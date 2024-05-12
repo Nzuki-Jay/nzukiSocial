@@ -1,0 +1,18 @@
+@import '../../styles.scss';
+
+.home {
+    flex: 3;
+    color: var(--storyColor);
+
+    .wrapper {
+       padding: 30px 20px 30px 40px;
+       max-width: 620px;
+       width: 100%;
+       @include flex-grid($direction: column, $align: flex-start);
+       gap: 2rem;
+       
+    }
+
+        
+  
+}

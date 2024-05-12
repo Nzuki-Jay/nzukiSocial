@@ -1,0 +1,148 @@
+@import '../../styles.scss';
+
+.rightSideBar {
+    flex: 2;
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    top: 50px;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        padding: 20px;
+        @include flex-grid($direction: column, $align: flex-start);
+        gap: 1.5rem;
+        font-size: 18px;  
+        width: 100%;  
+
+        .top,
+        .center,
+        .bottom {
+            @include flex-grid($direction: column, $align: flex-start);
+            gap: 1.2rem;
+            background-color: var(--bg);
+            padding: 20px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+
+            span {
+                color: var(--textColorSoft);
+                font-size: 20px;
+            }
+        }
+
+        .top {
+            .suggestedFriends {
+                @include flex-grid($direction: column,);
+                gap: 15px;
+                width: 100%;
+                
+                .suggestedFriend {
+                    @include flex-grid($align: center,  $justify: space-between);
+
+                    div {
+                        @include flex-grid($align: center);
+                        gap: 10px;
+                    }
+
+                    div:nth-child(2) {
+
+                        button {
+                            padding: 6px 12px;
+                            border-radius: 5px;
+                            border: none;
+                            color: var(--storyColor);
+                            cursor: pointer;
+                        }
+
+                        .btn1 {
+                            background-color: rgb(68, 68, 255);
+
+                            &:hover {
+                                background-color: rgb(16, 16, 252);
+                            }
+                        }
+                        .btn2 {
+                            background-color: rgb(252, 66, 66);
+
+                            &:hover {
+                                background-color: rgb(253, 9, 9);
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+
+        .center {
+            .activities {
+                @include flex-grid($direction: column,);
+                gap: 15px;
+                width: 100%;
+
+                .activity {
+                    @include flex-grid($align: center,  $justify: space-between);
+
+                    div {
+                        @include flex-grid($align: center);
+                        gap: 10px;
+                        cursor: pointer;
+                    }
+
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            .onlineFriends {
+                @include flex-grid($direction: column,);
+                gap: 15px;
+                width: 100%;
+            }
+
+            .friend {
+                @include flex-grid($align: center);
+                gap: 10px;
+                cursor: pointer;
+
+                .img {
+                    position: relative;
+
+                    div {
+                        height: 10px;
+                        width: 10px;
+                        background-color: rgb(57, 240, 57);
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+
+                span {
+                    font-size: 18px;
+                    color: var(--textColor);
+                }
+            }
+        }
+    }
+}

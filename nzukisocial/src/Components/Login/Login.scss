@@ -1,0 +1,63 @@
+@import '../../styles.scss';
+@import '../../Pages/Login/Login.scss';
+
+.loginComponent {
+    @include component();
+    
+
+    .loginLeft {
+        @include componentSideTwo();
+       
+        
+        img {
+            @include image();
+            border-radius: 12px 0 0 12px;
+        }     
+
+        .overlay {
+            @include overlay();
+            
+            button {
+                @include buttonStyle($background: #ffffff);
+            }
+
+            p,
+             span {
+                font-size: 18px;
+            }
+            
+        }
+    }
+
+    .loginRight {
+        @include componentSideOne();
+ 
+         h1 {
+             font-size: 25px;
+             font-weight: bold;
+             letter-spacing: 1px;
+         }
+ 
+         form {
+             @include formStyle();
+ 
+             input {
+                 @include inputStyle();
+ 
+                 &:placeholder {
+                     font-weight: bold;
+                     font-size: 18px;
+                 }
+             }
+ 
+             button {
+                 @include buttonStyle($background: rgb(110, 110, 160));
+ 
+                 &:hover {
+                     background-color: rgb(97, 97, 177);
+                     transition: ease 0.3s;
+                 }
+             }
+         }
+     }
+}

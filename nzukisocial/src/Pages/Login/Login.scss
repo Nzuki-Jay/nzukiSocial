@@ -1,0 +1,75 @@
+@import '../../styles.scss';
+
+.login {
+    @include flex-grid($align: center, $justify: center);
+    background-color: azure;
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin component() {
+    @include flex-grid();
+    max-width: 700px;
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 1px rgba($color: #000000, $alpha: 0.3);
+    background-color: white;
+}
+
+@mixin componentSideOne  {
+    flex: 1;
+    @include flex-grid($direction: column, $align: flex-start);
+    gap: 1.5rem;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@mixin componentSideTwo {
+    flex: 1;
+    position: relative;
+}
+
+@mixin formStyle() {
+    @include flex-grid($direction: column, $align: flex-start);
+    gap: 1.2rem;
+    width: 100%;
+}
+
+@mixin inputStyle() {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+@mixin buttonStyle($background: none) {
+    padding: 8px 16px;
+    border: none;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $background;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@mixin image() {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+@mixin overlay {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    color: #ffffff;
+    @include flex-grid($direction: column, $align: flex-start);
+    gap: 20px;
+}

@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.main {
+    color: var(--textColor);
+    
+
+    .content {
+        @include flex-grid();
+        background-color: var(--bg);
+        width: 100%;
+       
+    }
+
+}
+
+
+

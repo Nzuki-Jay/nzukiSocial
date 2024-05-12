@@ -1,0 +1,51 @@
+@import '../../styles.scss';
+
+.stories {
+    @include flex-grid($align: center);
+    gap: 17px;
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: 0 10px;
+   
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .story {
+        position: relative;
+        width: 170px;
+        height: 200px;
+        cursor: pointer;
+
+        img {
+            width: 170px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+        }
+
+        .icon {
+            background-color: rgb(51, 51, 189);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            @include flex-grid($align: center, $justify: center);
+        }
+    }
+
+   
+}

@@ -1,0 +1,90 @@
+@import '../../styles.scss';
+
+.share {
+    max-width: 100%;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    width: 100%;
+    @include flex-grid($direction: column, $align: flex-start);
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: var(--textColor);
+    font-size: 18px;
+
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+    }
+
+    hr {
+        width: 100%;
+        background-color: var(--border);
+        height: 1px;
+        border: none;
+        margin: 1.2rem 0;
+    }
+
+    .top {
+        width: 100%;
+        @include flex-grid($align: center);
+        gap: 5px;
+
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            border-radius: 50%;         
+        }
+
+        input {
+            width: 100%;
+            background-color: var(--bg);
+            border: none;
+            padding: 10px 20px;
+            outline: none;
+            color: var(--textSoft);
+            font-weight: bold;
+
+        }
+    }
+
+    .bottom {
+        @include flex-grid($align: center, $justify: space-between);
+        width: 100%;
+
+        button {
+            padding: 8px 16px;
+            background-color: rgb(63, 63, 240);
+            cursor: pointer;
+            border: none;
+            transition: ease 0.3s;
+            border-radius: 5px;
+            color: var(--storyColor);
+
+            &:hover {
+                background-color: rgb(26, 26, 247);
+            }
+        }
+
+
+        .bottomBtns {
+            @include flex-grid($align: center);
+            gap: 15px;
+
+            div {
+                @include flex-grid($align: center);
+                gap: 10px;
+                cursor: pointer;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+           
+        }
+    }
+
+}
